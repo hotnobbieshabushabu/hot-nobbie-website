@@ -136,11 +136,12 @@
       section .intro { color: var(--ink-soft); max-width: 58ch; margin: 0 0 30px; font-size: 18px; }
       .kicker { color: var(--red); font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; font-size: 13px; margin: 0 0 10px; }
 
-      .spread { display: grid; gap: 18px; }
-      @media (min-width: 760px) { .spread { grid-template-columns: 3fr 2fr; } }
-      .spread figure { margin: 0; }
-      .spread img { width: 100%; height: 100%; min-height: 260px; object-fit: cover; border-radius: 14px; }
-      .spread figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 8px; }
+      .spread { display: grid; gap: 30px; }
+      @media (min-width: 760px) { .spread { grid-template-columns: 3fr 2fr; gap: 18px; } }
+      .spread figure { margin: 0; display: flex; flex-direction: column; }
+      .spread img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; }
+      @media (min-width: 760px) { .spread img { flex: 1; aspect-ratio: auto; min-height: 260px; } }
+      .spread figcaption { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
 
       .steps { display: grid; gap: 0; border-top: 2px solid var(--ink); }
       .step { display: grid; grid-template-columns: 64px 1fr; gap: 18px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
